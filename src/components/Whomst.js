@@ -9,13 +9,15 @@ class Whomst extends Component {
   }
 
   whomstOnline() {
-    this.props.results.map(item => {
-      if (item === null){
+    var other = this.props.results.map(item => {
+      if (item === null) {
         console.log('nothing to see here');
       } else {
-        console.log(item);
+        console.log(item.channel.display_name);
       }
     });
+
+    return other;
   }
 
   render() {
