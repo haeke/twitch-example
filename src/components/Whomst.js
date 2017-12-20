@@ -5,11 +5,6 @@ class Whomst extends Component {
   constructor() {
     super();
 
-    this.whomstOnline = this.whomstOnline.bind(this);
-  }
-
-  whomstOnline() {
-    console.log('test');
   }
 
   render() {
@@ -40,7 +35,7 @@ class Whomst extends Component {
     return (
         <Grid columns='equal'>
           <Grid.Row>
-            <Grid.Column> Left {this.whomstOnline()}
+            <Grid.Column> Left
             </Grid.Column>
             <Grid.Column width={8}>
               <Menu pointing secondary>
