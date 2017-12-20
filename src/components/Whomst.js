@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Menu, Segment, Header } from 'semantic-ui-react';
 
 class Whomst extends Component {
-  constructor() {
-    super();
-
-  }
 
   render() {
     var info = this.props.results.map(item => {
