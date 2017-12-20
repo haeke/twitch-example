@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="container">
         <CustomHeader />
-        <Whomst />
+        <Whomst results={this.state.results}/>
       </div>
     );
   }

@@ -2,11 +2,27 @@ import React, { Component } from 'react';
 import { Grid, Menu, Segment, Header } from 'semantic-ui-react';
 
 class Whomst extends Component {
+  constructor() {
+    super();
+
+    this.whomstOnline = this.whomstOnline.bind(this);
+  }
+
+  whomstOnline() {
+    this.props.results.map(item => {
+      if (item === null){
+        console.log('nothing to see here');
+      } else {
+        console.log(item);
+      }
+    });
+  }
+
   render() {
     return (
         <Grid columns='equal'>
           <Grid.Row>
-            <Grid.Column> Left
+            <Grid.Column> Left {this.whomstOnline()}
             </Grid.Column>
             <Grid.Column width={8}>
               <Menu pointing secondary>
