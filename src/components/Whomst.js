@@ -6,20 +6,22 @@ class Whomst extends Component {
     var info = this.props.results.map(item => {
       if (item === null) {
         return (
-        <Segment key={this.props.users}>
+        <Segment color="grey" key={this.props.users}>
           <Grid columns='equal'>
             <Grid.Column width={3}>
               <img
-                src='https://static-cdn.jtvnw.net/jtv_user_pictures/imaqtpie-profile_image-8efb10b7bed60d76-100x100.jpeg' alt='avatar'/>
+                src='https://static-cdn.jtvnw.net/jtv_user_pictures/imaqtpie-profile_image-8efb10b7bed60d76-100x100.jpeg'
+                alt='avatar'/>
             </Grid.Column>
             <Grid.Column>
-              <Header textAlign='left'>{this.props.users}</Header>
+              <Header textAlign='left'>{this.props.users[1]}</Header>
               <Header.Subheader>Offline</Header.Subheader>
             </Grid.Column>
             <Grid.Column>
               <Header as='h2'>
                 No Video
               </Header>
+              <Header.Subheader>Going online at some point in time</Header.Subheader>
             </Grid.Column>
           </Grid>
         </Segment>
@@ -27,7 +29,7 @@ class Whomst extends Component {
       } else {
         var logo =  'https://static-cdn.jtvnw.net/previews-ttv/live_user_' + item.channel.display_name.toLowerCase() + '-100x100.jpg';
         return (
-        <Segment key={item.channel.display_name}>
+        <Segment color='grey' key={item.channel.display_name}>
           <Grid columns='equal'>
             <Grid.Column width={3}>
               <img src={logo} alt='avatar'/>
@@ -52,17 +54,15 @@ class Whomst extends Component {
     return (
         <Grid columns='equal'>
           <Grid.Row>
-            <Grid.Column> Left
+            <Grid.Column>
             </Grid.Column>
             <Grid.Column width={8}>
               <Menu pointing secondary>
-                <Menu.Item name='Everyone' />
-                <Menu.Item name='Online' />
-                <Menu.Item name='Offline' />
+                <Menu.Item name='User List' />
               </Menu>
             {info}
             </Grid.Column>
-            <Grid.Column> Right</Grid.Column>
+            <Grid.Column></Grid.Column>
           </Grid.Row>
         </Grid>
     );
