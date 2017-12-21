@@ -25,12 +25,12 @@ class Whomst extends Component {
         </Segment>
       );
       } else {
-        var pree =  'https://static-cdn.jtvnw.net/previews-ttv/live_user_' + item.channel.display_name + '-100x100.jpg';
+        var logo =  'https://static-cdn.jtvnw.net/previews-ttv/live_user_' + item.channel.display_name.toLowerCase() + '-100x100.jpg';
         return (
         <Segment key={item.channel.display_name}>
           <Grid columns='equal'>
             <Grid.Column width={3}>
-              <img src={pree} alt='avatar'/>
+              <img src={logo} alt='avatar'/>
             </Grid.Column>
             <Grid.Column>
               <Header textAlign='left'>{item.channel.display_name}</Header>
