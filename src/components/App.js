@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        users: ['freecodecamp', 'cosmos', 'imaqtpie'],
+        users: ['cosmos', 'freecodecamp', 'imaqtpie'],
         results: [],
       };
   }

@@ -13,7 +13,7 @@ class Whomst extends Component {
                 src='https://static-cdn.jtvnw.net/jtv_user_pictures/imaqtpie-profile_image-8efb10b7bed60d76-100x100.jpeg' alt='avatar'/>
             </Grid.Column>
             <Grid.Column>
-              <Header textAlign='left'>Persons Name</Header>
+              <Header textAlign='left'>{this.props.users}</Header>
               <Header.Subheader>Offline</Header.Subheader>
             </Grid.Column>
             <Grid.Column>
@@ -25,11 +25,12 @@ class Whomst extends Component {
         </Segment>
       );
       } else {
+        var pree =  'https://static-cdn.jtvnw.net/previews-ttv/live_user_' + item.channel.display_name + '-100x100.jpg';
         return (
         <Segment key={item.channel.display_name}>
           <Grid columns='equal'>
             <Grid.Column width={3}>
-              <img src='https://static-cdn.jtvnw.net/jtv_user_pictures/imaqtpie-profile_image-8efb10b7bed60d76-100x100.jpeg' alt='avatar'/>
+              <img src={pree} alt='avatar'/>
             </Grid.Column>
             <Grid.Column>
               <Header textAlign='left'>{item.channel.display_name}</Header>
@@ -39,6 +40,9 @@ class Whomst extends Component {
               <Header as='h2'>
                 {item.game}
               </Header>
+              <Header.Subheader>
+                {item.channel.status}
+              </Header.Subheader>
             </Grid.Column>
           </Grid>
         </Segment>
