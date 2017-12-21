@@ -7,11 +7,11 @@ class CustomHeader extends Component {
       <Grid centered columns={5}>
         <Grid.Column>
           <Header as='h1'>
-            <Icon name='settings' />
+            <Icon name='video camera'/>
             <Header.Content>
-              Whomst
+              Who's online
               <Header.Subheader>
-                See whomst'd online
+                "Whomst'd" streaming
               </Header.Subheader>
             </Header.Content>
           </Header>

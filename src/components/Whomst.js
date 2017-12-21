@@ -58,9 +58,9 @@ class Whomst extends Component {
             </Grid.Column>
             <Grid.Column width={8}>
               <Menu pointing secondary>
-                <Menu.Item name='User List' />
+                <Header as='h1'>User List</Header>
               </Menu>
-            {info}
+              {info}
             </Grid.Column>
             <Grid.Column></Grid.Column>
           </Grid.Row>
