@@ -3,10 +3,10 @@ import { Grid, Menu, Segment, Header } from 'semantic-ui-react';
 
 class Whomst extends Component {
   render() {
-    var info = this.props.results.map(item => {
+    var info = this.props.results.map((item, index) => {
       if (item === null) {
         return (
-        <Segment color="grey" key={this.props.users}>
+        <Segment color="grey" key={this.props.users[index]}>
           <Grid columns='equal'>
             <Grid.Column width={3}>
               <img
@@ -14,7 +14,7 @@ class Whomst extends Component {
                 alt='avatar'/>
             </Grid.Column>
             <Grid.Column>
-              <Header textAlign='left'>{this.props.users[1]}</Header>
+              <Header textAlign='left'>{this.props.users[index]}</Header>
               <Header.Subheader>Offline</Header.Subheader>
             </Grid.Column>
             <Grid.Column>
@@ -35,7 +35,9 @@ class Whomst extends Component {
               <img src={logo} alt='avatar'/>
             </Grid.Column>
             <Grid.Column>
-              <Header textAlign='left'>{item.channel.display_name}</Header>
+                <a href={item.channel.url}>
+                  <Header textAlign='left'> {item.channel.display_name}</Header>
+                </a>
               <Header.Subheader>Online</Header.Subheader>
             </Grid.Column>
             <Grid.Column>
